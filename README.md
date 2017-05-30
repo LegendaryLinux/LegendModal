@@ -2,6 +2,13 @@
 #### An ES6 modal class designed to make your life easier.
 
 ## Download / Install
+**Note: This package is not yet available on npm!**  
+For some reason I keep getting the following error:  
+`Uncaught TypeError: r.default is not a constructor at window.onload`  
+The package works fine when I build it with webpack locally, but gives that error
+when I try to use npm. My best guess is I'm not specifying the file properly. If you have
+any thoughts on that, let me know! My npm config files are in the repo.
+  
 Include the file in your project:  
 `npm install --save legend-modal`
 
