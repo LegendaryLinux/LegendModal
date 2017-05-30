@@ -101,7 +101,7 @@ modalOne.showModal();
 
 **Modal with an invisible overlay:**
 ```ecmascript 6
-let modalTwo = new LegendModal(document.getElemenyById('test2-div'),{
+let modalTwo = new LegendModal(document.getElementById('test2-div'),{
     visibleOverlay: false
 });
 modalTwo.showModal();

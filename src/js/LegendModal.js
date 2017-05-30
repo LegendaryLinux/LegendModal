@@ -51,7 +51,7 @@ class LegendModal{
         // Don't append the same modal to the body twice
         if(this._modalExists())
             throw "Modal with id " + this.modalId + "already exists in body.";
-    }
+    };
 
     _setOptions = (options) => {
         // If an options object is provided and is valid, use these options

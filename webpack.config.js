@@ -2,10 +2,13 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-    entry: "./src/js/index.js",
+    entry: {
+        index: path.resolve("./src/js/index.js"),
+        LegendModal: path.resolve("./src/js/LegendModal.js")
+    },
     output: {
         path: path.resolve("./dist/js"),
-        filename: "index.bundle.js"
+        filename: "[name].bundle.js"
     },
     module: {
         loaders: [
