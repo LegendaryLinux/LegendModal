@@ -1,0 +1,101 @@
+.legend-modal-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+
+    -webkit-animation: fadein 0.25s;
+    -moz-animation: fadein 0.24s;
+    -ms-animation: fadein 0.25s;
+    -o-animation: fadein 0.25s;
+    animation: fadein 0.25s;
+}
+
+.legend-modal-base{
+    background-color: #ffffff;
+    padding: 1.5em;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    position: fixed;
+    top: 10%;
+    z-index: 25;
+}
+
+.legend-modal-open{
+    -webkit-animation: fadein 0.75s;
+    -moz-animation: fadein 0.75s;
+    -ms-animation: fadein 0.75s;
+    -o-animation: fadein 0.75s;
+    animation: fadein 0.75s;
+}
+
+.legend-modal-close{
+    -webkit-animation: fadeout 0.25s;
+    -moz-animation: fadeout 0.25s;
+    -ms-animation: fadeout 0.25s;
+    -o-animation: fadeout 0.25s;
+    animation: fadeout 0.25s;
+}
+
+.legend-modal-close-button{
+    position: absolute;
+    top: 0.5em;
+    right: 0.5em;
+    color: #000000;
+}
+
+.legend-modal-close-button:hover{
+    cursor: pointer;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+@-moz-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+@-webkit-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+@-ms-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+@-o-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
