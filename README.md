@@ -8,10 +8,10 @@ Include the file in your project:
 Import the class:  
 `import LegendModal from 'legend-modal;`
 
-## Code Examples:
+## Getting Started:
 
-#### Start with a basic HTML file.
-Your modal content is contained within DOM elements on the page. Probably a `div`, but 
+#### Begin with a basic HTML file.
+Your modal content can contained within DOM elements on the page or provided by a React.Component.
 *LegendModal* isn't picky.
 ```html
 <!DOCTYPE HTML>
@@ -55,9 +55,9 @@ Your modal content is contained within DOM elements on the page. Probably a `div
 </html>
 ```
 
-#### Basic Usage
+## Basic Usage
 
-##### Constructor:
+#### Constructor:
 The constructor for LegendModal takes two optional arguments:  
 `new LegendModal(content,options)`
 
@@ -79,7 +79,7 @@ The constructor for LegendModal takes two optional arguments:
     * `showCloseButton`: If true, an `X` will be shown in the upper-right corner of the modal.
         Clicking this `X` will close the modal. Defaults to true.
         
-##### Methods:
+#### Methods:
 
 * `setContent(content)`: Define the content of the modal.
     * `content`: A DOM element to be used as the new content.
@@ -91,7 +91,7 @@ The constructor for LegendModal takes two optional arguments:
 
 * `closeModal()`: Close the modal and remove it from the DOM.
 
-#### Code Examples
+## Code Examples
 
 **To create and display a simple modal:**
 ```ecmascript 6
