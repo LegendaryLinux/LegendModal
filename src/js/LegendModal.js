@@ -45,12 +45,14 @@ class LegendModal{
      */
     _validateModal(){
         // If the modal body would be invalid, don't show the modal
-        if(this.modalContent === null)
+        if(this.modalContent === null){
             throw "Specified content for modal body appears invalid.";
+        }
 
         // Don't append the same modal to the body twice
-        if(this._modalExists())
+        if(this._modalExists()){
             throw "Modal with id " + this.modalId + "already exists in body.";
+        }
     };
 
     _setOptions = (options) => {
@@ -91,8 +93,9 @@ class LegendModal{
         overlay.classList.add("legend-modal-overlay");
 
         // Only make the overlay visible if the user hasn't disabled it
-        if(this.options.visibleOverlay)
+        if(this.options.visibleOverlay){
             overlay.style.background = "rgba(0,0,0,0.5)";
+        }
 
         // Set the style on the modal div
         let modalDiv = document.createElement("div");

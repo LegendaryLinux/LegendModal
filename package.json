@@ -1,14 +1,22 @@
 {
   "name": "legend-modal",
-  "version": "0.1.0",
+  "version": "1.0.4",
   "description": "A modal class to make life easier",
-  "main": "./dist/js/LegendModal.bundle.js",
   "scripts": {
     "build": "webpack -p"
   },
   "keywords": [
     "modal"
   ],
+  "files": [
+    "src/css",
+    "src/js/LegendModal.js"
+  ],
+  "main": "src/js/LegendModal.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LegendaryLinux/LegendModal.git"
+  },
   "author": "Chris Wilson <chris@legendserver.info> (https://legendserver.info)",
   "license": "GPL-3.0",
   "devDependencies": {

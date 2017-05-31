@@ -1,20 +1,6 @@
 # LegendModal
 #### An ES6 modal class designed to make your life easier.
 
-## Download / Install
-**Note: This package is not yet available on npm!**  
-For some reason I keep getting the following error:  
-`Uncaught TypeError: r.default is not a constructor at window.onload`  
-The package works fine when I build it with webpack locally, but gives that error
-when I try to use npm. My best guess is I'm not specifying the file properly. If you have
-any thoughts on that, let me know! My npm config files are in the repo.
-  
-Include the file in your project:  
-`npm install --save legend-modal`
-
-Import the class:  
-`import LegendModal from 'legend-modal;`
-
 ## Getting Started:
 
 #### Begin with a basic HTML file.
@@ -26,7 +12,7 @@ Your modal content can contained within DOM elements on the page or provided by 
 <head>
     <title>Legend Modal Test Page</title>
     <meta charset="UTF-8">
-    <script type="application/ecmascript" src=""></script>
+    <script type="application/ecmascript" src="src/js/index.js"></script>
 </head>
 <body>
     <div id="content-main">
@@ -99,6 +85,11 @@ The constructor for LegendModal takes two optional arguments:
 * `closeModal()`: Close the modal and remove it from the DOM.
 
 ## Code Examples
+
+**Import the class:**  
+```ecmascript 6
+import LegendModal from './LegendModal';
+```
 
 **To create and display a simple modal:**
 ```ecmascript 6

@@ -3,8 +3,7 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        index: path.resolve("./src/js/index.js"),
-        LegendModal: path.resolve("./src/js/LegendModal.js")
+        index: path.resolve("./src/js/index.js")
     },
     output: {
         path: path.resolve("./dist/js"),
