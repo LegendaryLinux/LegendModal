@@ -1,16 +1,99 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html>
 <head>
+    <title>Legend Modal Test Page</title>
     <meta charset="UTF-8">
-    <title>LegendModal Test</title>
     <script type="application/ecmascript" src="js/index.bundle.js"></script>
 </head>
 <body>
-    <div id="content-main">
-        Body content!
+<div id="content-main">
+    <h1>LegendModal Examples</h1>
+
+    <!-- Code examples and buttons to launch modals -->
+    <h2>Basic Usage</h2>
+    To create a simple modal, simply instantiate the class with a DOM element.
+    <pre class="code-example">
+        let modalOne = new LegendModal(document.getElementById('test1-div'));
+        document.getElementById('test1').addEventListener('click',modalOne.showModal);</pre>
+    <button id="test1">Show Modal</button><br/>
+
+    <h2>Invisible Overlay</h2>
+    The grey background is optional. If you want to make it invisible to the user, include
+    an object with the option <span class="bold">visibleOverlay: false</span>.
+    <pre class="code-example">
+        let modalTwo = new LegendModal(document.getElementById('test2-div'),{
+            visibleOverlay: false
+        });
+        document.getElementById('test2').addEventListener('click',modalTwo.showModal);</pre>
+    <button id="test2">Show Modal</button>
+
+    <h2>Manually Close the Modal</h2>
+    You may include a DOM element in the modal which is intended to close it. This element
+    should have the class <span class="bold">legend-modal-close</span>. In this example, I
+    use a button.
+    <pre class="code-example">
+        &lt;button class="legend-modal-close"&gt;
+            Close me!
+        &lt;/button&gt;</pre>
+
+    <pre class="code-example">
+        let modalThree = new LegendModal();
+        modalThree.setContent(document.getElementById('test3-div'));
+        document.getElementById('test3').addEventListener('click',modalThree.showModal);</pre>
+    <button id="test3">Show Modal</button>
+
+    <h2>Limiting Close Options</h2>
+    If you want to strictly control how a modal is closed, you may disable the escape button and
+    remove the close button from the upper right corner of the modal. This is best used when also
+    providing the user a button to close the modal.
+    <pre class="code-example">
+        let modalFour = new LegendModal(null,{
+            closeOnEscape: false,
+            closeOnOverlayClick: false
+        });
+        modalFour.setContent(document.getElementById('test4-div'));
+        document.getElementById('test4').addEventListener('click',modalFour.showModal);</pre>
+    <button id="test4">Show Modal</button>
+
+    <h2>Set Options After Instantiation</h2>
+    You may set the content and options of a modal after instantiating the class. This can be useful
+    if you don't know what the content or options are when the class is created. Ex: Ajax.
+    <pre class="code-example">
+        let modalFive = new LegendModal();
+        modalFive.setContent(document.getElementById('test5-div'));
+        modalFive.setOptions({
+            closeOnOverlayClick: true,
+            closeOnEscape: false,
+            visibleOverlay: true,
+            showCloseButton: false
+        });
+        document.getElementById('test5').addEventListener('click',modalFive.showModal);</pre>
+    <button id="test5">Show Modal</button>
+
+
+    <!-- Divs used as modal content -->
+    <div id="test1-div" class="example-modal">
+        I'm just a bunch of text! You can close this modal by pressing escape, clicking
+        the overlay, or clicking the X button in the upper right.
     </div>
-    <div id="my-modal-content" style="display:none">
-        Modal content!
+
+    <div id="test2-div" class="example-modal">
+        This modal can be closed the same as the others, but the overlay behind it
+        is invisible!
     </div>
+
+    <div id="test3-div" class="example-modal">
+        This modal can be closed by pressing the button below.<br/>
+        <button id="close-test3" class="legend-modal-close">Close me!</button>
+    </div>
+
+    <div id="test4-div" class="example-modal">
+        This modal can be closed only by pressing the X in the upper right corner.
+    </div>
+
+    <div id="test5-div" class="example-modal">
+        Options for this modal were set using <em>setOptions</em>
+    </div>
+</div>
 </body>
 </html>

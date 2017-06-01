@@ -1,6 +1,11 @@
 # LegendModal
 #### An ES6 modal class designed to make your life easier.
 
+##### Features:
+* Modal fades in and out using fancy CSS transitions
+* Automatically disables page scrolling while modal is open
+* Ridiculously simple to use
+
 ## Getting Started:
 
 #### Begin with a basic HTML file.
@@ -32,8 +37,8 @@ Your modal content can contained within DOM elements on the page or provided by 
         </div>
                 
         <div id="test3-div" style="display:none">
-            This modal can be closed by pressing the button!
-            <button id="close-test3">Close me!</button>
+            This modal can be closed by pressing the button!<br/>
+            <button class="legend-modal-close">Close me!</button>
         </div>
         
         <div id="test4-div" style="display:none">
@@ -41,7 +46,7 @@ Your modal content can contained within DOM elements on the page or provided by 
         </div>
         
         <div id="test5-div" style="display:none">
-            Options for this modal were set using <em>setOptions</em>
+            Options for this modal were set using <em>setOptions</em>.
         </div>
     </div>
 </body>
@@ -84,6 +89,10 @@ The constructor for LegendModal takes two optional arguments:
 
 * `closeModal()`: Close the modal and remove it from the DOM.
 
+*Note: `closeModal` is invoked automatically when a click event is fired on a 
+DOM element with the class `legend-modal-close` if that DOM element is present
+in the modal body.
+
 ## Code Examples
 
 **Import the class:**  
@@ -102,15 +111,19 @@ modalOne.showModal();
 let modalTwo = new LegendModal(document.getElementById('test2-div'),{
     visibleOverlay: false
 });
-modalTwo.showModal();
 ```
 
-**Setting an event listener to close the modal:**
+**Manually close the modal:**
 ```ecmascript 6
-let modalThree = new LegendModal();
-document.getElementById('close-test3').addEventListener('click',modalThree.closeModal);
-modalThree.setContent(document.getElementById('test3-div'));
-modalThree.showModal();
+let modalThree = new LegendModal(document.getElementById('test3-modal'));
+setTimeout(() => {
+	modalThree.closeModal();
+}, 5000);
+```
+
+**Specifying a DOM element to close the modal:**
+```html
+<button class="legend-modal-close">Close Modal</button>
 ```
 
 **Define options before modal content:**
@@ -120,7 +133,6 @@ let modalFour = new LegendModal(null,{
     closeOnOverlayClick: false
 });
 modalFour.setContent(document.getElementById('test4-div'));
-modalFour.showModal();
 ```
 
 **Alter options after modal instantiation:**
@@ -133,5 +145,4 @@ modalFive.setOptions({
     visibleOverlay: true,
     showCloseButton: false
 });
-modalFive.showModal();
 ```
