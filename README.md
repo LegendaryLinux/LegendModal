@@ -91,7 +91,7 @@ The constructor for LegendModal takes two optional arguments:
 
 *Note: `closeModal` is invoked automatically when a click event is fired on a 
 DOM element with the class `legend-modal-close` if that DOM element is present
-in the modal body.
+in the modal body.*
 
 ## Code Examples
 
