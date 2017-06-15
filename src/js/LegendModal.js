@@ -166,16 +166,12 @@ class LegendModal{
 	 */
 	closeModal = () => {
 		let overlay = document.getElementById(this.overlayId);
-		overlay.classList.add("legend-modal-close");
 		document.body.removeEventListener('keydown',this.handleEscapeKey);
-		setTimeout(() => {
-			overlay.style.display = "none";
-			overlay.parentNode.removeChild(overlay);
+        overlay.parentNode.removeChild(overlay);
 
-			// Re-enable scrolling
-			document.body.style.overflowX = this.initialOverflowX;
-			document.body.style.overflowY = this.initialOverflowY;
-		},400);
+        // Re-enable scrolling
+        document.body.style.overflowX = this.initialOverflowX;
+        document.body.style.overflowY = this.initialOverflowY;
 	};
 }
 

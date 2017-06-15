@@ -2,7 +2,7 @@
 #### An ES6 modal class designed to make your life easier.
 
 ##### Features:
-* Modal fades in and out using fancy CSS transitions
+* Modal fades in using fancy CSS transitions
 * Automatically disables page scrolling while modal is open
 * Ridiculously simple to use
 
