@@ -3,11 +3,11 @@ const path = require('path');
 
 module.exports = {
     entry: {
-        index: path.resolve("./src/js/index.js")
+        index: path.resolve("./src/js/LegendModal.js")
     },
     output: {
-        path: path.resolve("./dist/js"),
-        filename: "[name].bundle.js"
+        path: path.resolve(__dirname),
+        filename: "[name].js"
     },
     module: {
         loaders: [
